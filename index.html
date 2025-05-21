@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Desenvolvedor iOS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <!-- Floating Action Button -->
+    <div class="floating-action-button" onclick="window.location.href='#contact'">
+        <i class="fas fa-paper-plane"></i>
+    </div>
+
+    <!-- Flying code elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="code-flying" style="left: 10%; animation-delay: 0s;">import SwiftUI</div>
+        <div class="code-flying" style="left: 30%; animation-delay: 2s;">struct ContentView: View</div>
+        <div class="code-flying" style="left: 70%; animation-delay: 5s;">@State private var isAnimating = false</div>
+        <div class="code-flying" style="left: 50%; animation-delay: 7s;">VStack { ... }</div>
+        <div class="code-flying" style="left: 20%; animation-delay: 10s;">.animation(.easeInOut)</div>
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold">
+                    <span class="swift-gradient-text">Daniel Miguel</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="font-medium hover:text-orange-600 transition">Sobre</a>
+                    <a href="#experience" class="font-medium hover:text-orange-600 transition">Experiência</a>
+                    <a href="#skills" class="font-medium hover:text-orange-600 transition">Habilidades</a>
+                    <a href="#projects" class="font-medium hover:text-orange-600 transition">Projetos</a>
+                    <a href="#contact" class="font-medium hover:text-orange-600 transition">Contato</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-600 hover:text-orange-600 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#about" class="block px-3 py-2 rounded-md hover:bg-gray-100">Sobre</a>
+                <a href="#experience" class="block px-3 py-2 rounded-md hover:bg-gray-100">Experiência</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md hover:bg-gray-100">Habilidades</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md hover:bg-gray-100">Projetos</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md hover:bg-gray-100">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-start bg-black text-white overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Fundo Hero" class="w-full h-full object-cover brightness-75">
+        </div>
+
+        <!-- Black gradient overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10"></div>
+
+        <!-- Text content -->
+        <div class="relative z-20 container mx-auto px-6 md:px-12 max-w-2xl">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4 drop-shadow-lg">
+                Daniel Miguel
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 drop-shadow swift-gradient-text">
+                Desenvolvedor iOS
+            </h2>
+            <p class="text-lg md:text-xl text-white/90 mb-8 drop-shadow">
+                Transformando ideias em experiências digitais incríveis com Swift, UIKit e SwiftUI.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contact"
+                    class="bg-white text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
+                    Vamos conversar
+                </a>
+                <a href="#projects"
+                    class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition">
+                    Meus Projetos
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Sobre Mim</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <img src="./1747791321944.jpeg"
+                        alt="Profile" class="w-64 h-64 rounded-full object-cover shadow-lg">
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-semibold mb-4">Formado em Análise e Desenvolvimento de Sistemas pelo IFSP
+                    </h3>
+                    <p class="text-gray-600 mb-6">
+                        Graduado pelo Instituto Federal de Educação,
+                        Ciência e Tecnologia de São Paulo (IFSP), reconhecido com nota máxima (5) pelo MEC. Atuo como
+                        desenvolvedor
+                        desde 2021, com início na área de desenvolvimento web e, nesse tempo, adquiri experiência na
+                        criação de sistemas de ponta-a-ponta.
+                    </p>
+
+                    <p class="text-gray-600 mb-6">
+                        Atualmente, estou direcionando meu foco para o desenvolvimento iOS
+                        com Swift, em um processo de transição de carreira. Tenho estudado desde os fundamentos da
+                        linguagem até padrões de projeto, testes, UIKit e SwiftUI, documentando toda minha evolução
+                        de forma contínua e estruturada.
+                    </p>
+
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/swiftando-dev" target="_blank"
+                            class="bg-gray-800 text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-700 transition flex items-center">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                        <a href="https://www.youtube.com/@swiftando" target="_blank"
+                            class="bg-red-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-red-700 transition flex items-center">
+                            <i class="fab fa-youtube mr-2"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Minha Jornada</h2>
+
+            <div class="relative">
+                <!-- Freelancer -->
+                <div class="timeline-item relative pl-12 mb-12">
+                    <div
+                        class="absolute left-0 top-0 w-8 h-8 rounded-full bg-orange-600 flex items-center justify-center text-white">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold">Desenvolvedor WEB</h3>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">2021 -
+                                2023</span>
+                        </div>
+                        <h4 class="text-lg font-medium swift-gradient-text mb-3">Freelancer</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Criação de sites institucionais</li>
+                            <li>Refatoração de sistemas para escalabilidade</li>
+                            <li>Aumento de performance em sistemas de gestão</li>
+                            <li>Desenvolvimento de dashboards</li>
+                            <li>Tecnologias: PHP, JavaScript, jQuery, HTML, CSS, MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Embraer -->
+                <div class="timeline-item relative pl-12 mb-12">
+                    <div
+                        class="absolute left-0 top-0 w-8 h-8 rounded-full bg-orange-600 flex items-center justify-center text-white">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold">Desenvolvedor Fullstack</h3>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">2023 -
+                                2024</span>
+                        </div>
+                        <h4 class="text-lg font-medium swift-gradient-text mb-3">Embraer - 3ª maior empresa de aviação do
+                            mundo</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Automatização de processos internos com Python e Pandas</li>
+                            <li>Tratamento de dados e criação de indicadores estratégicos</li>
+                            <li>Redução de jornadas de processos (case: de 40 minutos para 1 minuto)</li>
+                            <li>Desenvolvimento de dashboards com PowerBI</li>
+                            <li>Tecnologias: Python, Pandas, React, MySQL, PowerBI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Rede D'or -->
+                <div class="timeline-item relative pl-12 mb-12">
+                    <div
+                        class="absolute left-0 top-0 w-8 h-8 rounded-full bg-orange-600 flex items-center justify-center text-white">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold">Analista Sênior</h3>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">2024 -
+                                Presente</span>
+                        </div>
+                        <h4 class="text-lg font-medium swift-gradient-text mb-3">Rede D'or - Maior rede de hospitais da
+                            América Latina</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Desenvolvimento de soluções escaláveis em arquitetura de microsserviços</li>
+                            <li>Implementação de infraestrutura como código com Terraform</li>
+                            <li>Gerenciamento de serviços na AWS</li>
+                            <li>Bancos de dados: PostgreSQL e OracleDB</li>
+                            <li>Tecnologias: Python, Node.js, Terraform, AWS, Microsserviços, React, Testes Unitários
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- iOS Transition -->
+                <div class="timeline-item relative pl-12">
+                    <div
+                        class="absolute left-0 top-0 w-8 h-8 rounded-full bg-orange-600 flex items-center justify-center text-white">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-semibold">Transição para Desenvolvedor iOS</h3>
+                            <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">2025 -
+                                Presente</span>
+                        </div>
+                        <h4 class="text-lg font-medium swift-gradient-text mb-3">Estudos e Projetos Pessoais</h4>
+                        <ul class="list-disc pl-5 space-y-2 text-gray-600">
+                            <li>Foco em desenvolvimento iOS com Swift</li>
+                            <li>Aprendizado de fundamentos, padrões de projeto e arquiteturas</li>
+                            <li>Desenvolvimento com UIKit e SwiftUI</li>
+                            <li>Implementação de testes unitários e de UI</li>
+                            <li>Documentação da jornada no GitHub e YouTube</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Minhas Habilidades</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- iOS Development -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 mr-4">
+                            <i class="fab fa-apple text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">iOS Development</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Swift</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">SwiftUI</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">UIKit</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Xcode</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Testes
+                            Unitários</span>
+                    </div>
+                </div>
+
+                <!-- Backend Development -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 mr-4">
+                            <i class="fas fa-server text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Backend Development</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Python</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Node.js</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">PHP</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Golang</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Flask</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Express</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 mr-4">
+                            <i class="fas fa-database text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Bancos de Dados</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">MySQL</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">PostgreSQL</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">OracleDB</span>
+                        <span class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Core
+                            Data</span>
+                    </div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 mr-4">
+                            <i class="fas fa-code-branch text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">DevOps & Cloud</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Git</span>
+                        <span class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Azure
+                            DevOps</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">CI/CD</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">AWS</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Terraform</span>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 mr-4">
+                            <i class="fas fa-laptop-code text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Frontend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">HTML</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">CSS</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">JavaScript</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">React</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">jQuery</span>
+                    </div>
+                </div>
+
+                <!-- Data Analysis -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 mr-4">
+                            <i class="fas fa-chart-line text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Análise de Dados</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Pandas</span>
+                        <span
+                            class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">PowerBI</span>
+                        <span class="skill-pill bg-gray-200 px-3 py-1 rounded-full text-sm font-medium transition">Data
+                            Visualization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Certificações</h2>
+
+            <div class="relative overflow-hidden">
+                <div id="carousel" class="flex transition-transform duration-500 ease-in-out space-x-6">
+                    <!-- Card 1 -->
+                    <div class="min-w-[300px] max-w-sm bg-gray-100 rounded-xl shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-2">Swift: Entendendo a linguagem</h3>
+                        <p class="text-sm text-orange-600 font-medium mb-1">Alura</p>
+                        <p class="text-gray-600 text-sm">
+                            Fundamentos da linguagem Swift.
+                        </p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="min-w-[300px] max-w-sm bg-gray-100 rounded-xl shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-2">Swift: entendendo e praticando orientação a objetos</h3>
+                        <p class="text-sm text-orange-600 font-medium mb-1">Alura</p>
+                        <p class="text-gray-600 text-sm">
+                            Fundamentos da liguagem Swift com orientação a objetos.
+                        </p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="min-w-[300px] max-w-sm bg-gray-100 rounded-xl shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-2">iOS: construindo seu primeiro aplicativo</h3>
+                        <p class="text-sm text-orange-600 font-medium mb-1">Alura</p>
+                        <p class="text-gray-600 text-sm">
+                            Uso de constraints, Auto Layout e UIKit para criar
+                            interfaces responsivas.
+                        </p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="min-w-[300px] max-w-sm bg-gray-100 rounded-xl shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-2">Go: a linguagem do Google</h3>
+                        <p class="text-sm text-orange-600 font-medium mb-1">Alura</p>
+                        <p class="text-gray-600 text-sm">
+                            Fundamentos da liguagem Go.
+                        </p>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="min-w-[300px] max-w-sm bg-gray-100 rounded-xl shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-2">Design de Aplicativos</h3>
+                        <p class="text-sm text-orange-600 font-medium mb-1">Danki Code</p>
+                        <p class="text-gray-600 text-sm">
+                            Práticas de design, padrões de estilo e ferramentas de design.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Carousel Buttons -->
+                <div class="flex justify-center mt-8 space-x-4">
+                    <button onclick="scrollCarousel(-1)"
+                        class="p-2 rounded-full bg-orange-600 text-white hover:bg-orange-700">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button onclick="scrollCarousel(1)"
+                        class="p-2 rounded-full bg-orange-600 text-white hover:bg-orange-700">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Projetos</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-orange-500 to-orange-300 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">iQuiz</h3>
+                        <p class="text-gray-600 mb-4">Aplicativo de perguntas e respostas</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">UIKit</span>
+                            <span
+                                class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Storyboard</span>
+                            <span
+                                class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Constraints</span>
+                        </div>
+                        <a href="https://github.com/swiftando-dev/iQuizSwift" target="_blank"
+                            class="text-orange-600 font-medium hover:underline flex items-center">
+                            Ver no GitHub <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                 <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-green-300 flex items-center justify-center">
+                        <i class="fa-solid fa-gamepad text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Mathrix</h3>
+                        <p class="text-gray-600 mb-4">Jogo educativo de matemática</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span
+                                class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Javascript</span>
+                            <span
+                                class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Lua</span>
+                            <span
+                                class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded">Game Design</span>
+                        </div>
+                        <a href="https://walkerbarap.itch.io/mathrix" target="_blank"
+                            class="text-orange-600 font-medium hover:underline flex items-center">
+                            Ver no Itch.io <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://github.com/swiftando-dev" target="_blank"
+                    class="inline-flex items-center px-6 py-3 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <i class="fab fa-github mr-2"></i> Ver todos os projetos no GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Vamos Conversar</h2>
+
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-gray-50 rounded-xl shadow-sm p-8 text-center">
+                    <label for="email" class="block text-lg font-medium text-gray-700 mb-4">Meu Email</label>
+                    <div class="flex items-center justify-center gap-4">
+                        <input type="text" id="email" value="swiftando.dev@gmail.com" readonly
+                            class="w-full px-4 py-3 rounded-lg border border-gray-300 text-center text-gray-700 bg-white cursor-default" />
+                        <button onclick="copyEmail()"
+                            class="px-4 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition">
+                            Copiar
+                        </button>
+                    </div>
+                    <p id="copy-msg" class="text-sm text-green-600 mt-4 hidden">Email copiado!</p>
+                </div>
+
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-sm text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 mx-auto mb-4">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium mb-2">YouTube</h3>
+                        <a href="https://www.youtube.com/@swiftando" class="text-orange-600 hover:underline">Swiftando</a>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-sm text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 mx-auto mb-4">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium mb-2">LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/daniel-miguel-h/"
+                            class="text-orange-600 hover:underline">daniel-miguel-h</a>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-sm text-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 mx-auto mb-4">
+                            <i class="fab fa-github text-xl"></i>
+                        </div>
+                        <h3 class="text-lg font-medium mb-2">GitHub</h3>
+                        <a href="https://github.com/swiftando-dev" target="_blank"
+                            class="text-orange-600 hover:underline">swiftando-dev</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold mb-2">
+                        <span class="swift-gradient-text">Daniel Miguel</span>
+                    </div>
+                    <p class="text-gray-400">Transformando linhas de código em experiências incríveis.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/swiftando-dev" target="_blank"
+                        class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@swiftando" target="_blank"
+                        class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/daniel-miguel-h/"
+                        class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Daniel Miguel. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

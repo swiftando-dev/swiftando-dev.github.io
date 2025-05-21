@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #007AFF 0%, #00C6FF 100%);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.skill-pill:hover {
+    background-color: #007AFF;
+    color: white;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 30px;
+    height: calc(100% - 30px);
+    width: 2px;
+    background-color: #E5E7EB;
+}
+
+.swift-gradient-text {
+    background: linear-gradient(90deg, #F05138 0%, #FB6D3A 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.floating-action-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #F05138 0%, #FB6D3A 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    box-shadow: 0 4px 15px rgba(255, 94, 0, 0.3);
+    z-index: 100;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.code-flying {
+    position: absolute;
+    font-family: monospace;
+    color: rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    animation: fly 15s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(100vh) translateX(0);
+    }
+
+    100% {
+        transform: translateY(-100vh) translateX(100px);
+    }
+}
